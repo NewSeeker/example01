@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>恶搞演示</title>
+    <script>
+        function myFunction1() {
+            alert("谢谢老板，告辞");
+            alert("拜拜");
+        }
+        function myFunction2() {
+            var btn = document.getElementById("btn2");
+            console.log(btn.style);
+            if(btn.style.top == "") {
+                btn.style.top = "100px";
+            } else {
+                btn.removeAttribute("style");
+            }
+        }
+    </script>
+    <style>
+        *{
+            text-align: center;
+        }
+        #btn1 {
+            width: 100px;
+            height: 50px;
+        }
+        #btn2 {
+            width: 100px;
+            height: 50px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<p>同意辞职吗？</p ><br>
+<div>
+    <button id="btn1" onclick="myFunction1()">同意</button>
+    <button id="btn2" onmouseover="myFunction2()">不同意</button>
+</div>
+</body>
+</html>
